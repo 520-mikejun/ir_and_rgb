@@ -1,0 +1,5 @@
+<launch>
+    <!-- 启动相机/雷达节点 -->
+    <include file="$(find livox_ros_driver)/launch/livox_lidar_msg.launch" />
+    <include file="$(find mvs_ros_pkg)/launch/mvs_camera_trigger.launch" />
+</launch>

@@ -1,0 +1,29 @@
+# 红外相机基本配置
+ir_camera:
+  ir_img_topic: "/rectify_hk"       # 红外相机话题
+  ir_img_en: 1                      # 启用红外图像处理
+  ir_img_time_offset: 0.0           # 红外图像时间偏移
+  
+  # 激光雷达到红外相机的外参
+  extrinsic_T_IR: [0.0462082, -0.0155274, 0.0139112]
+  extrinsic_R_IR: [-0.0115277, -0.999893, -0.00904849, 
+                   0.0190269, 0.00882811, -0.99978, 
+                   0.999753, -0.0116974, 0.0189231]
+  
+  # 红外相机内参矩阵
+  intrisicT: [378.7773, 0, 321.8907, 
+              0, 378.5598, 255.4721, 
+              0, 0, 1]
+  # 红外相机畸变系数
+  ditortion: [-0.1624, 0.0195, 0.0293, 0.0, 0.0]
+
+# 红外-可见光融合配置
+ir_vis_fusion:
+  fusion_method: "weighted"         # 融合方法
+  ir_weight_default: 0.5            # 红外图像默认权重
+  vis_weight_default: 0.5           # 可见光图像默认权重
+  fusion_threshold: 100             # 自适应融合阈值
+
+# 点云保存配置
+ir_savepcd:
+  save_ir_pc_en: 1                  # 是否保存融合红外信息的点云

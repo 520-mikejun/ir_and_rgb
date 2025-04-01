@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+<arg name="rviz" default="true" />
+  <node pkg="mvs_camera_ros" name="mvs_camera_ros_node" type="mvs_camera_ros_node" output="screen"></node>
+  <group if="$(arg rviz)">
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find livox_color)/rvz/hk.rviz" /> 
+  </group>
+</launch>

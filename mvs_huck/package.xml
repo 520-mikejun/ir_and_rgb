@@ -1,0 +1,27 @@
+<package format="2">
+  <name>mvs_camera_ros</name>
+  <version>0.0.1</version>
+  <description>The mvs_camera_ros package</description>
+
+  <maintainer email="user@example.com">your_name</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>rosbag</build_depend>
+
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>rosbag</exec_depend>
+
+  <export>
+  </export>
+</package>
